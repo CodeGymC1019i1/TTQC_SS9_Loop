@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Thực hành: </h1>
+    <button onclick="bai1();">ấn vào để xem bài tập 1</button>
+    <button onclick="bai2();">ấn vào để xem bài tập 2</button>
+
+    <script>
+        function bai1() {
+            let num = parseInt(prompt("Enter a number:"));
+            let total = 0;
+
+            while(num != 0) {
+                num = parseInt(prompt("Enter a number:"));
+                alert(num);
+                total += num;
+            }
+            alert(total);
+        }
+    </script>
+
+    <script>
+        function bai2() {
+            let i = 1;
+            while (i <= 100) {
+                document.write("<hr width =" + i + "%>" );
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>
