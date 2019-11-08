@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>[Thực hành] Sử dụng vòng lặp for</title>
+</head>
+<body>
+        <h2>JavaScript Loops</h2>
+    <p id="display"></p>
+
+    <span><strong>Bài 2:</strong> Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.</span>
+    <p id="display1"></p>
+    <script>
+    let text = "";
+    let i;
+    for (i=0;i<5;i++) {
+        text += "the number is " + i + "<br/>";
+    }
+    document.getElementById("display").innerHTML = text;
+
+    let num = prompt("Enter your number: ");
+    let total = 0;
+    let i1 = 1;
+    for (i1 = 1; i1<=num;i1++){
+        total += i1;
+    }
+    document.getElementById("display1").innerHTML = "Total: " + total;
+    </script>
+</body>
+</html>
