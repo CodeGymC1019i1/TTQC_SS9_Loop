@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first fibonacy devide by 5</title>
+</head>
+<body>
+<script>
+    let j = 1;
+    let fibonacciBefore = 1, fibonacciBefore1 = 0;
+
+    while (j % 5 != 0) {
+        j = fibonacciBefore + fibonacciBefore1;
+        fibonacciBefore1 = fibonacciBefore;
+        fibonacciBefore = j;
+    }
+    document.write('Số đầu tiên trong dãy chia hết cho 5 là: '+ j );
+</script>
+</body>
+</html>

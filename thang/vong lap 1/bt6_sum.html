@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sum first 30 number divide by 7</title>
+</head>
+<body>
+<script>
+    let sum = 0;
+    let i = 1;
+    let count = 0;
+
+
+    while (count < 30) {
+        while (i % 7 != 0) {
+            i++;
+        }
+        sum += i;
+        i++;
+        count++;
+    }
+    document.write('Tổng 30 số đầu tiên chia hết cho 7: '+ sum);
+
+</script>
+</body>
+</html>

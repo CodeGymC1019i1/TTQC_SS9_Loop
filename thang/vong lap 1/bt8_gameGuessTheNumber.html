@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game Guess the number</title>
+</head>
+<body>
+<button onclick="guessNumber()">Chơi</button>
+<script>
+
+    function guessNumber() {
+        let start = parseInt(prompt('Bạn muốn đoán số trong khoảng nào? Nhập số bắt đầu: '));
+        let end = parseInt(prompt('Nhập số cuối trong khoảng: '));
+        let botNumber = Math.floor(Math.random() * (end - start + 1) + start);
+        let userNumber = botNumber + 1;
+        let count = 0;
+       alert(botNumber);
+
+        while ( botNumber != userNumber && count < 3) {
+            userNumber = parseInt(prompt('Nhập vào số bạn đoán: '));
+            if (botNumber == userNumber)
+                alert('Bạn là Vangal tái thế');
+            else if (userNumber < botNumber)
+                alert('Số bạn đoán đang nhỏ hơn, hãy thử số lớn hơn.');
+            else
+                alert('Số bạn đoán lớn hơn, hãy thử số nhỏ hơn.');
+            count++;
+        }
+        if (count == 3)
+            alert("Bạn đã đoán hết 3 lần, chơi lại thôi.");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank interest</title>
+</head>
+<body>
+<script>
+    let amoutBegin = parseInt(prompt('Nhập số tiền ban đầu: '));
+    let month = parseInt(prompt('Nhập số tháng cho vay: '));
+    let interestPerMonth = parseInt(prompt('Nhập lãi suất ngân hàng mỗi tháng (%): '));
+    let i;
+    let interestTotal = 1;
+
+    for (i=0; i<month; i++) {
+        interestTotal *= (1 + (interestPerMonth / 100))
+    }
+    alert('Số tiền cuối cùng bạn nhận được sau ' + month + " là : " + interestTotal);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci sum 20 first elements</title>
+</head>
+<body>
+<script>
+    let i,j;
+    let fibonacciBefore = 1, fibonacciBefore1 = 0;
+    let sum =1;
+    for (i=0; i < 19;i++) {
+        j = fibonacciBefore + fibonacciBefore1;
+        sum += j;
+        fibonacciBefore1 = fibonacciBefore;
+        fibonacciBefore = j;
+    }
+    document.write(' ' + sum);
+</script>
+</body>
+</html>

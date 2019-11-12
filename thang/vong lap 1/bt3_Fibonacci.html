@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+<script>
+    let i,j;
+    let fibonacciBefore = 1, fibonacciBefore1 = 0;
+    document.write(' ' + fibonacciBefore);
+    for (i=0; i < 19;i++) {
+            j = fibonacciBefore + fibonacciBefore1;
+            document.write(' ' + j);
+            fibonacciBefore1 = fibonacciBefore;
+            fibonacciBefore = j;
+    }
+</script>
+</body>
+</html>
