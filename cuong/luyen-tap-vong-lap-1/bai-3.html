@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function displayFibonaciList(N) {
+            count = 0;
+            st1 = 0;
+            st2 = 1;
+            document.write(st1 + " " + st2);
+            while (count < N - 1) {
+                st3 = st1 + st2;
+                document.write(" " + st3);
+                st1 = st2;
+                st2 = st3;
+                count++;
+            }
+
+        }
+        function main() {
+            let number;
+            do {
+                alert("Hãy nhập vào số nguyên dương");
+                number = prompt("Nhập số lượng số nguyên tố muốn hiển thị:");
+            } while (number <= 0 || isNaN(number) == true);
+            displayFibonaciList(number);
+        }
+
+        main();
+    </script>
+</body>
+
+</html>

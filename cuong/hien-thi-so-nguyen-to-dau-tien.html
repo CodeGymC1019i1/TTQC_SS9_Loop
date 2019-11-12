@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkPrime(N) {
+            if (N<2) 
+            return false;
+            for (let i = 2; i <= N / 2; i++) {
+                if (N % i == 0)
+                    return false;
+            }
+            return true;
+        }
+        function displayListPrimes(number) {
+            let i = 1;
+            let count = 0;
+            while (count < number) {
+                if (checkPrime(i) == true) {
+                    document.write(i + " ");
+                    count++;
+                }
+                i++;
+            }
+        }
+        function main() {
+            let number;
+            do {
+                alert("Hãy nhập vào số nguyên dương");
+                number = prompt("Nhập số lượng số nguyên tố muốn hiển thị:");
+            } while (number <= 0 || isNaN(number) == true);
+            displayListPrimes(number);
+        }
+
+        main();
+    </script>
+</body>
+
+</html>
