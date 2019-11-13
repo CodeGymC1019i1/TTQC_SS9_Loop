@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1. Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó. </title>
+</head>
+<body>
+<script>
+    let i=parseFloat(prompt("nhập số: "));
+    let sum=0;
+    while(i !=-1){
+        sum+=i;
+        document.write(i+' ');
+        i=parseFloat(prompt("nhập số: "))
+    }
+    document.write("tổng là: "+sum)
+</script>
+</body>
+</html>
