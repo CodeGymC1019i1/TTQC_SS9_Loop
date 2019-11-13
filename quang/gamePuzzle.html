@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Pluzze</title>
+    <style>
+        #color {
+            border: 2px solid yellow;
+            width: 560px;
+        }
+
+        img {
+            width: 560px;
+            height: 280px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="image/image1_1.png" onclick="image1()" id="img1"><br/>
+    <img src="image/image2_2.png" onclick="image2()" id="img2"><br/>
+    <img src="image/image3_1.jpg" onclick="image3()" id="img3"><br/>
+</div>
+<script>
+    let img1 = document.getElementById('img1');
+    let img2 = document.getElementById('img2');
+    let img3 = document.getElementById('img3');
+
+    function image1() {
+        if (img1.src.match('image/image1_1.png')) {
+            img1.src = 'image/image1_2.png';
+        } else if (img1.src.match('image/image1_2.png')) {
+            img1.src = 'image/image1_3.png';
+        } else {
+            img1.src = 'image/image1_1.png';
+        }
+        display1();
+    }
+
+    function image2() {
+        if (img2.src.match('image/image2_1.png')) {
+            img2.src = 'image/image2_2.png';
+        } else if (img2.src.match('image/image2_2.png')) {
+            img2.src = 'image/image2_3.png';
+        } else {
+            img2.src = 'image/image2_1.png';
+        }
+        display1();
+    }
+
+    function image3() {
+        if (img3.src.match('image/image3_1.jpg')) {
+            img3.src = 'image/image3_2.png';
+        } else if (img3.src.match('image/image3_2.png')) {
+            img3.src = 'image/image3_3.png';
+        } else {
+            img3.src = 'image/image3_1.jpg';
+        }
+        display1();
+    }
+
+    function display1() {
+
+        let a = img1.src.substr(0, img1.src.length - 6);
+        let b = img2.src.substr(0, img2.src.length - 6);
+        let c = img3.src.substr(0, img3.src.length - 6);
+        if (a == b && a == c) {
+            alert('done');
+        }
+    }
+</script>
+</body>
+</html>

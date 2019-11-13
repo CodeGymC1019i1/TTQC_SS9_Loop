@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành Do You Love Me</title>
+</head>
+<body>
+<h1 style="position: absolute; left: 200px; top: 100px;  color: red">Em có yêu anh không?</h1>
+<button id="co" onclick="yesLove()" style="position: absolute; left: 220px; top:200px; width: 100px">Có</button>
+<button id="khong" onmouseover="noLove()" style="position: absolute; left: 350px; top:200px; width: 100px">Không
+</button>
+<script>
+    function yesLove() {
+        alert('Anh cũng yêu em!')
+    }
+
+    function noLove() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('khong').style.left = x + 'px';
+        document.getElementById('khong').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài làm thêm 1</title>
+</head>
+<body>
+<!--Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không-->
+<h2>Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không</h2><br>
+Nhập a:<input type="text" id="nhap1"><br/>
+Nhập b:<input type="text" id="nhap2"><br/>
+<input type="button" onclick="kiemTraHam()" value="Kiem tra">
+<br/>
+<span id="tinh"></span><br>
+<!--Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.-->
+<h2>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</h2>
+Nhập tuổi:<input type="text" id="nhaptuoi">
+<input type="button" onclick="kiemtra()" value="Kiểm tra"><br/>
+<!--Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0-->
+<h2>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn
+    0</h2>
+Nhập số cần so sánh: <input type="text" id="sosanh">
+<button onclick="sosanh()">So sánh</button>
+<!--Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+<h2>Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó</h2>
+Nhập số thứ 1:<input type="text" id="number1"><br/>
+Nhập số thứ 2:<input type="text" id="number2"><br/>
+Nhập số thứ 3:<input type="text" id="number3"><br/>
+<button onclick="soMax()">Tìm số lớn nhất</button>
+<h2>Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h2>
+Nhập số tiền sản phẩm:<input type="text" id="tienSP"><br/>
+Nhấp số lượng đã bán:<input type="text" id="soLuong"><br/>
+Nhập số phần trăm hoa hồng:<input type="text" id="hoaHong"><br/>
+<button onclick="tinhLuong()">Tính lương</button><br/>
+<span id="tong"></span>
+</body>
+<script>
+    //Bài 1: Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+    function kiemTraHam() {
+        let a = parseFloat(document.getElementById('nhap1').value);
+        let b = parseFloat(document.getElementById('nhap2').value);
+        let c='a'/'b';
+        if (c == 0) {
+            document.getElementById('tinh').innerText = a + ' chia het cho ' + b;
+        } else {
+            document.getElementById('tinh').innerText = a + ' khong chia het cho ' + b;
+        }
+    }
+
+    //Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+    function kiemtra() {
+        let tuoi = parseFloat(document.getElementById('nhaptuoi').value);
+        if (tuoi >= 15) {
+            alert('Đủ điều kiện vào lớp 10');
+        } else {
+            alert("không đủ điều kiện vào lớp 10");
+        }
+    }
+
+    //Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+    function sosanh() {
+        let sosanh = parseFloat(document.getElementById('sosanh').value);
+        if (sosanh > 0) {
+            alert(sosanh + ' lớn hơn 0');
+        } else {
+            alert(sosanh + ' nho hon 0');
+        }
+    }
+
+    //Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+    function soMax() {
+        let number1 = parseFloat(document.getElementById('number1').value);
+        let number2 = parseFloat(document.getElementById('number2').value);
+        let number3 = parseFloat(document.getElementById('number3').value);
+        if (number1 > number2 && number1 > number3) {
+            alert(number1 + ' số lớn nhất');
+        } else if (number2 > number3) {
+            alert(number2 + ' số lớn nhất');
+        } else {
+            alert(number3 + ' số lớn nhất');
+        }
+    }
+    //Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+    function tinhLuong() {
+        let tiensp=parseFloat(document.getElementById('tienSP').value);
+        let soluong=parseFloat(document.getElementById('soLuong').value);
+        let hoahong=parseFloat(document.getElementById('hoaHong').value);
+        let tong=tiensp*soluong*hoahong/100;
+        document.getElementById('tong').innerText='Hoa hồng nhận được là: '+tong;
+    }
+</script>
+</html>

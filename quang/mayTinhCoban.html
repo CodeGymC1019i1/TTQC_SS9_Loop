@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị ngày theo tháng</title>
+    <style>
+        button {
+            width: 30px;
+            margin: 0 0 10px 0;
+        }
+
+        input {
+            width: 130px;
+            margin: 0 0 10px 0;
+        }
+
+        div {
+            width: 160px;
+            border: 2px solid black;
+            padding: 10px 0 0px 0;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <input type="text" id="hienThi"><br/>
+    <button value="1" onclick=addScreen(this.value)>1</button>
+    <button value="2" onclick=addScreen(this.value)>2</button>
+    <button value="3" onclick=addScreen(this.value)>3</button>
+    <button value="+" onclick=addScreen(this.value)>+</button>
+    <br/>
+    <button value="4" onclick=addScreen(this.value)>4</button>
+    <button value="5" onclick=addScreen(this.value)>5</button>
+    <button value="6" onclick=addScreen(this.value)>6</button>
+    <button value="-" onclick=addScreen(this.value)>-</button>
+    <br/>
+    <button value="7" onclick=addScreen(this.value)>7</button>
+    <button value="8" onclick=addScreen(this.value)>8</button>
+    <button value="9" onclick=addScreen(this.value)>9</button>
+    <button value="*" onclick=addScreen(this.value)>x</button>
+    <br/>
+    <button onclick=xoa(this.value)>C</button>
+    <button value="0" onclick=addScreen(this.value)>0</button>
+    <button value="=" onclick=calc()>=</button>
+    <button value="/" onclick=addScreen(this.value)>/</button>
+    <br/>
+</div>
+<script>
+    let hienThi = document.getElementById('hienThi');
+
+    function addScreen(value) {
+        hienThi.value += value;
+    }
+
+    function calc() {
+        let result = eval(hienThi.value);
+        hienThi.value = result;
+    }
+
+    function xoa(value) {
+        hienThi.value ='';
+    }
+</script>
+</body>
+</html>

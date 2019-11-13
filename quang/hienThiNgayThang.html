@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị ngày theo tháng</title>
+</head>
+<body>
+<input type="text" id="month1">
+<button onclick="month1()">Tính số ngày</button><br/>
+<span id="hienThi1"></span><br/>
+<script>
+    function month1() {
+        let value1=document.getElementById('month1').value;
+        switch (value1) {
+            case('1'):
+            case('3'):
+            case('5'):
+            case('7'):
+            case('8'):
+            case('10'):
+            case('12'):
+                document.getElementById('hienThi1').innerText='tháng '+ value1 + ' có 31 ngày';
+                break;
+            case ('2'):
+                document.getElementById('hienThi1').innerText='tháng '+value1+' có 28 hoặc 29 ngày';
+                break;
+            case ('4'):
+            case ('6'):
+            case ('9'):
+            case ('11'):
+                document.getElementById('hienThi1').innerText='tháng '+value1+' có 30 ngày';
+                break;
+            default:
+                document.getElementById('hienThi1').innerText='Tháng không hợp lệ';
+        }
+    }
+</script>

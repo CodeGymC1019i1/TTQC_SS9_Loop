@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cân nặng cơ thể</title>
+</head>
+<body>
+<b>Tính trọng lượng cơ thể</b><br/>
+Nhập cân nặng(Kg):<input type="text" id="weight"><br/>
+Nhập chiều cao(cm):<input type="text" id="height"><br/>
+<input type="button" value="Quy đổi" onclick="exchange()">
+<script>
+    function exchange() {
+       let weight=document.getElementById('weight').value;
+       let height=document.getElementById('height').value;
+       let bmi=weight/Math.pow(height,2);
+       if(bmi<18.5){
+           alert("Underweight");
+       }else if(bmi<=25){
+           alert("Normal")
+       }else if(bmi<30){
+           alert('Overweight')
+       }else {
+           alert('Obese')
+       }
+    }
+</script>
+</body>
+</html>
